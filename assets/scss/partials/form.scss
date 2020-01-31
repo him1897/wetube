@@ -1,0 +1,143 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border-radius: 5px;
+    .form-container_upload{
+        text-align: center;
+        border-radius: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 45px;
+        background-color: pink;
+        .title{
+            
+            display: block;
+            font-family: cursive;
+            font-size: xx-large;
+        }
+        .body{
+            align-items: flex-start;
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 40px;
+                max-width: 450px;
+                margin-bottom: 50px;
+                input{
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+    .firm-container_login{
+        background-color: pink;
+        border-radius: 25px;
+        .title{
+            display: block;
+            font-family: cursive;
+            text-align: center;
+            font-size: xx-large;
+            text-decoration: underline;
+            padding: 30px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            max-width: 450px;
+            margin-bottom: 50px;
+            .social{
+                margin-top: 30px;
+            }
+            input{
+                border: 1px solid pink;
+            }
+        }
+    }
+    .form-container__changePassword{
+        border-radius: 5px;
+        .title{
+            display: block;
+            font-family: cursive;
+            margin-bottom: -30px;
+            padding: 14%;
+            text-decoration: underline;
+            text-align: center;
+            font-size: xx-large;
+            border-radius: 25px 25px 0px 0px;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            height : 150px;
+        }
+        .body{
+            background-color: pink;
+            border-radius: 0px 0px 25px 25px;
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 40px;
+                max-width: 450px;
+                margin-bottom: 50px;
+                input{
+                    border-radius: 5px;
+                    border: 1px solid rgb(0,0,0.25);
+                }
+                
+                textarea{
+                    margin-bottom: 25px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                }
+                input[type="submit"]{
+                    background-color: $namgyu;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .form_container_top{
+        border-radius: 5px;
+        .title{
+            display: block;
+            font-family: cursive;
+            margin-bottom: -30px;
+            padding: 14%;
+            text-decoration: underline;
+            text-align: center;
+            font-size: xx-large;
+            border-radius: 25px 25px 0px 0px;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            height : 150px;
+        }
+        .body{
+            background-color: pink;
+            border-radius: 0px 0px 25px 25px;
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 40px;
+                max-width: 450px;
+                margin-bottom: 50px;
+                input{
+                    border-radius: 5px;
+                    border: 1px solid rgb(0,0,0.25);
+                }
+                
+                textarea{
+                    margin-bottom: 25px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                }
+                input[type="submit"]{
+                    background-color: $namgyu;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

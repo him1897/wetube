@@ -1,0 +1,19 @@
+.home-videos{
+video{
+ width: 50%;
+}
+ display: grid;
+ grid-template-columns: repeat(6, minmax(160px, 1fr));
+ grid-gap: 50px;
+.videoBlock { 
+    grid-column: span 2;
+
+.videoBlock__thumbnail{
+    width: 450px;
+    height: 250px;
+    margin: 1 auto;
+}
+
+}
+ 
+}
