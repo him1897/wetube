@@ -27,6 +27,11 @@ const GITHUB_CALLBACK = "/auth/github/callback";
 const FB = "/auth/Facebook";
 const FB_CALLBACK = "/auth/callback";
 
+// API = server와 통신하는 URL 이다
+const API = "/api";
+const REGISTER_VIEW = "/:id/view";
+const ADD_COMMENT = "/:id/comment";
+
 const routes = {
     home: HOME,
     join: JOIN,
@@ -46,20 +51,20 @@ const routes = {
     videos: VIDEOS,
     upload: UPLOAD,
     videoDetail: (id) =>{
-    if(id){
-        return `/videos/${id}`;
-    }else{
-        return VIDEO_DETAIL;
-    }
-    },
-    editVideo: id => {
         if(id){
-            return `/videos/${id}/edit`;
+            return `/videos/${id}`;
         }else{
-            return EDIT_VIDEO;
+            return VIDEO_DETAIL;
         }
     },
-    deleteVideo: id => {
+    editVideo: (id) => {
+        if(id){
+        return `/videos/${id}/edit`;
+        }else{
+                return EDIT_VIDEO;
+        }
+    },
+    deleteVideo: (id) => {
         if(id){
             return `/videos/${id}/delete`;
         }else{
@@ -70,7 +75,10 @@ const routes = {
     gitHubCallback: GITHUB_CALLBACK,
     me: ME,
     facebook: FB,
-    facebookCallback: FB_CALLBACK
+    facebookCallback: FB_CALLBACK,
+    api: API,
+    registerView: REGISTER_VIEW,
+    addComment: ADD_COMMENT
 };
 
 export default routes;

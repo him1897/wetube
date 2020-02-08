@@ -13,11 +13,11 @@
     }
     .video__info{
         width: 100%;
-        max-width: 850px;
-        margin-top: 50px;
+        max-width: 960px;
+        margin-top: 25px;
         button{
             width: 100px;
-            margin-bottom: 15px;
+            margin-left: 860px;
             cursor: pointer;
         }
     .video__author{
@@ -43,8 +43,13 @@
     .video__views{
         font-size: 14px;
     }
- }
- .video__comment-number{
-     font-size: 18px;
- }
+    }
+    .video__comment-number{
+        font-size: 18px;
+    }
+    .userimg{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
 }
