@@ -2,7 +2,8 @@
   "name": "wetube",
   "version": "1.0.0",
   "description": "Cloning Youtube with Vanilla and NodeJS",
-  "author": "Young Jun You",
+  "main": "index.js",
+  "author": "Kim nam gyu",
   "dependencies": {
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
