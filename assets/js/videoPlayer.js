@@ -7,11 +7,37 @@ const currentTime = document.getElementById("currentTime");
 const totalTime = document.getElementById("totalTime");
 const volumeRange = document.getElementById("jsVolume");
 
+const menuButton = document.getElementsByClassName("jsAD");
+const subMenu = document.getElementsByClassName("rara");
+const deleteComment = document.getElementsByClassName("bomb");
+
+
 const registerView = () => {
   const videoId = window.location.href.split("/videos/")[1];
   fetch(`/api/${videoId}/view`, {
     method:"POST"
   })
+}
+
+
+
+function menuDropdown(event){
+  console.log(event.target);
+  
+  let index = 0;
+  for(const item of menuButton){
+    console.log(item);
+    if(item===event.target){
+      break;
+    }
+    index++;
+  }
+  console.log(index);
+  if(subMenu[index].style.display ===''){
+    subMenu[index].style.display = 'block';
+  }else{
+    subMenu[index].style.display = '';
+  }
 }
 
 function handlePlayClick() {
@@ -121,6 +147,9 @@ function init() {
   videoPlayer.addEventListener("loadedmetadata", setTotalTime);
   videoPlayer.addEventListener("ended", handleEnded);
   volumeRange.addEventListener("input", handleDrag);
+  Array.from(menuButton).forEach((item)=>{
+    item.addEventListener("click",menuDropdown);
+  });
 }
 
 if (videoContainer) {

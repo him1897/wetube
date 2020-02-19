@@ -2,7 +2,7 @@ extends layouts/main
 include mixins/videoPlayer
 
 block content
-    .video-detail__container
+    .video-detail__container#jsVideoDetail
         +videoPlayer({
             src:video.fileUrl
         })
@@ -33,8 +33,36 @@ block content
                 input(type="text", placeholder="Add a comment")
             ul.video__comments-list#jsCommentList
                 each comment in video.comments.reverse()
-                    li
-                        img.userimg(src=comment.creator.avatarUrl)
-                        a=comment.creator.name
-                        p=comment.text
+                    .kimkim
+                        .user-video
+                            .user-video-avatar
+                                img.userimg(src=comment.creator.avatarUrl)
+                                .user-video-ad
+                                    a.jsAD
+                                        i.fas.fa-ellipsis-v
+                                .user-video-rara.rara
+                                    a(href="#")
+                                        p
+                                            i.fas.fa-broom   수정하기
+                                    a(href="#")
+                                        p 
+                                            i.fas.fa-flag   신고하기
+                                    a
+                                        p 
+                                            i.fas.fa-bomb.bomb   삭제하기
+                            .user-video-name
+                                a=comment.creator.name
+                            br
+                            .user-video-comment
+                                p=comment.text
+                            br
+                            .user-video-your
+                                a(href="#")
+                                    span
+                                        i.fas.fa-smile
+                                a(href="#")
+                                    span
+                                        i.fas.fa-angry
+                        br
+                        br
                         
